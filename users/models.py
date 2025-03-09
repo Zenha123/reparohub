@@ -50,9 +50,7 @@ class ServiceCenter(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=200)
-    service_catalog = models.TextFeild(blank=True)
-    contact_no = models.CharField(max_length=10,blank=True,null=True)
-
+   
     def __str__(self):
         return self.name
     

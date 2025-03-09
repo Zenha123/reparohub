@@ -1,5 +1,5 @@
 from django.db import models
-from users.models import Customer
+from users.models import *
 
 
 
@@ -11,3 +11,12 @@ class Product(models.Model):
         warranty_status = models.IntegerField(help_text="Warranty period in months")
         def __str__(self):
             return self.product_name
+        
+
+
+class Service(models.Model):
+        service = models.ForeignKey(ServiceCenter, on_delete=models.CASCADE)
+        service_catalog = models.TextFeild(blank=True)
+        contact_no = models.CharField(max_length=10,blank=True,null=True)
+        def __str__(self):
+            return self.service
