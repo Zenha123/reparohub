@@ -39,11 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'users',
-    'product',
+    'registration',
 ]
 
 
-AUTH_USER_MODEL='Users.customUser'
+AUTH_USER_MODEL='users.customUser'
 DEFAULT_AUTO_FIELD= 'django.db.models.BigAutoFeild'
 
 
